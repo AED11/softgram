@@ -1,0 +1,56 @@
+{
+	"layout": {
+		"home": "Асосӣ",
+		"search": "Ҷустуҷӯ",
+		"explore": "Шавқовар",
+		"reels": "Reels",
+		"message": "Пайёмҳо",
+		"notification": "Огоҳномаҳо",
+		"create": "Эҷод кардан",
+		"profile": "Профил",
+		"more": "Бештар",
+		"threads": "Treads",
+		"mores": {
+			"setting": "Танзимот",
+			"action": "Амалҳои шумо",
+			"saved": "Нигоҳдошташудаҳо",
+			"mode": "Режимро иваз кунед",
+			"problem": "Паемҳо дар бораи мушкилот",
+			"switch": "Гузариш байни аккаунтҳо",
+			"exit": "Баромадан"
+		}
+	},
+	"notfound": {
+		"title": "Мутаассифона, ин саҳифа дастрас нест.",
+		"description": "Шояд шумо истиноди беэътиборро истифода кардаед е саҳифа нест карда шудааст.",
+		"back": "Бозгашт Ба Instagram."
+	},
+	"other": {
+		"meta": "Meta",
+		"information": "Маълумот",
+		"blog": "Блог",
+		"vacancy": "Ҷойҳои холӣ",
+		"help": "Ёрдам",
+		"api": "API",
+		"confidentiality": "Махфият",
+		"conditions": "Условия",
+		"places": "Шартҳо",
+		"instagramLite": "Instagram Lite",
+		"threads": "Treads",
+		"download": "Шартҳо боркунии мухотибон ва шахсони ғайри корбар",
+		"metaVerified": "Meta Verified",
+		"from": "©️ 2024 Instagram Аз Ҷониби Meta"
+	},
+   "authentication":{
+    "login": {
+      "login": "Рақами телефон, номи ё суроғаи почтаи электронӣ",
+      "password": "Рамз",
+      "logIn": "Даромадан",
+      "or": "Ё",
+      "facebook": " Бо Facebook ворид Шавед",
+      "forgot": "Рамзро фаромӯш кардед?",
+      "noAccount": "Шумо ҳисоб акканут? Имзо кардан",
+      "download": "Барномаро зеркашӣ кунед."
+    }
+  }
+}

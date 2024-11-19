@@ -1,0 +1,57 @@
+{
+	"layout": {
+		"home": "Главный",
+		"search": "Поисковый запрос",
+		"explore": "Интересное",
+		"reels": "Reels",
+		"message": "Сообщения",
+		"notification": "Уведомление",
+		"create": "Создать",
+		"profile": "Профиль",
+		"more": "Ещё",
+		"threads": "Treads",
+		"mores": {
+			"setting": "Настройки",
+			"action": "Ваши действия",
+			"saved": "Сахраненное",
+			"mode": "Переключить режим",
+			"problem": "Сообщения о проблеме",
+			"switch": "Переключить между аккаунта...",
+			"exit": "Выйти"
+		}
+	},
+   "notfound" : {
+    "title": "К сожалению, эта страница недоступна.",
+    "description" : "Возможно, вы воспользовались недействительной ссылкой или страница была удалена.",
+    "back": " Назад в Instagram."
+  },
+   "other" : {
+    "meta": "Meta",
+    "information": "Информация",
+    "blog": "Блог",
+    "vacancy": "Вакансии",
+    "help": "Помощь",
+    "api" : "API",
+    "confidentiality": "Конфиденциальность",
+    "conditions": "Условия",
+    "places": "Место",
+    "instagramLite": "Instagram Lite",
+    "threads": "Treads",
+    "download": "Загрузка контактов и лица, не являющиеся пользователями",
+    "metaVerified": "Meta Verified",
+    "from" : "©️ 2024 Instagram from Meta"
+  },
+   "authentication":{
+    "login": {
+      "login": "Телефон, имя пользователя или эл.адрес",
+      "password": "Пароль",
+      "enter": "Войти",
+      "or": "ИЛИ",
+      "facebook": " Войти через Facebook",
+      "forgot": "Забыли пароль?",
+      "noAccount": "У вас ещё нет аккаунта? Зарегистрироваться",
+      "registration": "Зарегистрироваться",
+      "download": "Установите приложение."
+    }
+  }
+}

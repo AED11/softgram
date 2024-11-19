@@ -1,0 +1,56 @@
+{
+	"layout": {
+		"home": "Home",
+		"search": "Search",
+		"explore": "Explore",
+		"reels": "Reels",
+		"message": "Message",
+		"notification": "Notification",
+		"create": "Create",
+		"profile": "Profile",
+		"more": "More",
+		"threads": "Treads",
+		"mores": {
+			"setting": "Setting",
+			"action": "Your actions",
+			"saved": "Saved",
+			"mode": "Change the mode",
+			"problem": "Problem reports",
+			"switch": "Switch between accounts",
+			"exit": "Exit"
+		}
+	},
+	"notfound": {
+		"title": "Unfortunately, this page is not available.",
+		"description": "You may have used an invalid link or the page has been deleted.",
+		"back": "Back to Instagram."
+	},
+	"other": {
+		"meta": "Meta",
+		"information": "Information",
+		"blog": "Blog",
+		"vacancy": "Vacancy",
+		"help": "Help",
+		"api": "API",
+		"confidentiality": "Confidentiality",
+		"conditions": "Conditions",
+		"places": "Places",
+		"instagramLite": "Instagram Lite",
+		"threads": "Treads",
+		"download": "Uploading contacts and non-users",
+		"metaVerified": "Meta Verified",
+		"from": "©️ 2024 Instagram from Meta"
+	},
+  "authentication":{
+    "login": {
+      "login": "Phone number, username, or email",
+      "password": "Password",
+      "enter": "Log in",
+      "or": "or",
+      "facebook": " Log in with Facebook",
+      "forgot": "forgot password?",
+      "noAccount": "Don't have an account? Sign up",
+      "download": "Get the app."
+    }
+  }
+}
