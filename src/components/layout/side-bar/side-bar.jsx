@@ -1,8 +1,8 @@
+"use client"
 import { useState } from 'react';
 import Link from 'next/link';
 import { useTranslation } from 'react-i18next';
 import Profile from '@/assets/icon/layout/instagramDefaultProfile.jpg';
-import Switcher from '@/components/shared/switcher/switcher';
 import { Menu, MenuItem } from '@mui/material';
 import { usePathname } from 'next/navigation';
 import Image from 'next/image';
@@ -53,7 +53,7 @@ export default function SideBar({ children }) {
 
   return (
     <div>
-      <section className="w-[320px] h-[100%] fixed md:hidden border-r-2 border-gray-300">
+      <section className="w-[320px] h-[100%] fixed  border-r-2 border-gray-300">
         <div className="sideBar h-full pb-[100px]">
           <div className="m-auto pt-[20px] ml-[20px] flex pb-[10px] mt-[20px]">
             {homeIcon}

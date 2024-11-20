@@ -1,82 +1,62 @@
-'use client'
-import { useEffect, useState } from 'react'
-import './globals.css' // for global styles, including dark mode styles
-import BottomNavigation from '@/components/layout/bottom-navigation/bottom-navigation'
-import MiniSideBar from '@/components/layout/mini-side-bar/mini-side-bar'
-import SideBar from '@/components/layout/side-bar/side-bar'
-import { usePathname } from 'next/navigation'
+'use client';
+
+import { useEffect, useState } from 'react';
+import './globals.css'; // для глобальных стилей, включая стили темной темы
+import BottomNavigation from '@/components/layout/bottom-navigation/bottom-navigation';
+import MiniSideBar from '@/components/layout/mini-side-bar/mini-side-bar';
+import SideBar from '@/components/layout/side-bar/side-bar';
+import { usePathname } from 'next/navigation';
+import TranslatorProvider from '@/components/providers/translator-provider'
 
 export default function RootLayout({ children }) {
-	useEffect(() => {
-		const prefersDarkMode = window.matchMedia(
-			'(prefers-color-scheme: dark)'
-		).matches
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const pathname = usePathname();
 
-		if (prefersDarkMode) {
-			document.body.classList.add('dark')
-		} else {
-			document.body.classList.remove('dark')
-		}
+  // Логика для выбора типа боковой панели в зависимости от ширины окна
+  const getBarType = () => {
+    if (windowWidth <= 767) {
+      return 'bottom';
+    }
+    if (windowWidth <= 1279 || pathname === '/search' || pathname.includes('chat')) {
+      return 'minibar';
+    }
+    return 'bar';
+  };
 
-		// Listen for color scheme changes
-		const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)')
-		const handleColorSchemeChange = e => {
-			if (e.matches) {
-				document.body.classList.add('dark')
-			} else {
-				document.body.classList.remove('dark')
-			}
-		}
+  const barType = getBarType();
+  const renderBar = (children) => {
+    switch (barType) {
+      case 'bottom':
+        return <BottomNavigation>{children}</BottomNavigation>;
+      case 'minibar':
+        return <MiniSideBar>{children}</MiniSideBar>;
+      case 'bar':
+      default:
+        return <SideBar>{children}</SideBar>;
+    }
+  };
 
-		mediaQuery.addEventListener('change', handleColorSchemeChange)
-		return () => {
-			mediaQuery.removeEventListener('change', handleColorSchemeChange)
-		}
-	}, [])
-	const [windowWidth, setWindowWidth] = useState(window.innerWidth)
-	const pathname = usePathname()
+  // Слушаем изменения размера окна
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
 
-	useEffect(() => {
-		const handleResize = () => {
-			setWindowWidth(window.innerWidth)
-		}
+    window.addEventListener('resize', handleResize);
 
-		window.addEventListener('resize', handleResize)
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
-		return () => {
-			window.removeEventListener('resize', handleResize)
-		}
-	}, [])
-
-	const getBarType = () => {
-		if (windowWidth <= 767) {
-			return 'bottom'
-		}
-		if (
-			windowWidth <= 1279 ||
-			pathname === '/search' ||
-			pathname.includes('chat')
-		) {
-			return 'minibar'
-		}
-		return 'bar'
-	}
-	const barType = getBarType()
-	const renderBar = children => {
-		switch (barType) {
-			case 'bottom':
-				return <BottomNavigation />
-			case 'minibar':
-				return <MiniSideBar />
-			case 'bar':
-			default:
-				return <SideBar>{children}</SideBar>
-		}
-	}
-
-	return (
-		<html lang='en'>
-			<body className='h-full'>{renderBar(children)}</body>
-		</html>
-	)
+  return (
+    <TranslatorProvider>
+      <html lang="en">
+        {/* Ensure there is no space or text node here */}
+        <body className="h-full">
+          {renderBar(children)}
+        </body>
+      </html>
+    </TranslatorProvider>
+  );
 }
