@@ -7,6 +7,7 @@ import MiniSideBar from '@/components/layout/mini-side-bar/mini-side-bar';
 import SideBar from '@/components/layout/side-bar/side-bar';
 import { usePathname } from 'next/navigation';
 import TranslatorProvider from '@/components/providers/translator-provider'
+import ThemeWrapper from '@/components/providers/theme-provider'
 
 export default function RootLayout({ children }) {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -54,7 +55,10 @@ export default function RootLayout({ children }) {
       <html lang="en">
         {/* Ensure there is no space or text node here */}
         <body className="h-full">
-          {renderBar(children)}
+						<ThemeWrapper>
+						{renderBar(children)}
+
+						</ThemeWrapper>
         </body>
       </html>
     </TranslatorProvider>
